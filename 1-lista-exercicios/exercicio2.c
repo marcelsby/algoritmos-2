@@ -1,3 +1,7 @@
+/* Escreva um algoritmo que leia dois vetores de 10 posições e faça a multiplicação */
+/* dos elementos de mesmo índice, colocando o resultado em um terceiro vetor. */
+/* Mostre o vetor resultante. */
+/* Marcel Seichi Barbosa Yamamoto - 2º TADS */
 #include <stdio.h>
 
 int main (void) {
@@ -35,7 +39,7 @@ int main (void) {
             printf("%d", arr_res[i]);
         }
     }
-    printf(" ]");
+    printf(" ]\n");
 
 
     return 0;
