@@ -6,20 +6,37 @@
 #include <stdio.h>
 
 int main (void) {
-  int rows = 3;
-  int columns = 4;
+  int rows = 2;
+  int columns = 2;
+  int tamMatriz = rows * columns;
   int A[rows][columns];
 
   /* Atribuição dos valores às posições da matriz */
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < columns; j++) {
-      printf("\nDigite o valor para a posição A[%d][%d] da matriz: ", i + 1, j + 1); 
+      printf("\nDigite o valor para a posição A[%d][%d] da matriz: ", i + 1, j + 1);
       scanf("%i", &A[i][j]);
     }
   }
 
+  /* Validação para checar se existem números repetidos na matriz */
+  int res[tamMatriz];
+  int resIdx = 0;
+
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; i < columns; j++) {
+      res[resIdx] = A[i][j];
+      resIdx++;
+    }
+  }
+  
+  for (int i = 0; i < tamMatriz; i++) {
+    /* printf(" %d ", res[i]); */
+    printf(" %d ", tamMatriz);
+  }
+  
   /* Imprimindo a matriz de forma organizada */
-  printf("\n Matriz:\n"); 
+  printf("\n Matriz:\n");
   
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < columns; j++) {
