@@ -1,11 +1,11 @@
-/* Escreva um algoritmo que lÃª uma matriz M 5x5 e calcula as somas: */
+/* Escreva um algoritmo que lê uma matriz M 5x5 e calcula as somas: */
 /* a. da linha 4 de M; */
 /* b. da coluna 2 de M; */
 /* c. da diagonal principal; */
-/* d. da diagonal secundÃ¡ria */
+/* d. da diagonal secundária */
 /* e. de todos os elementos da matriz M */
 /* Escrever essas somas e a matriz. */
-/* Marcel Seichi Barbosa Yamamoto - 2Âº TADS */
+/* Marcel Seichi Barbosa Yamamoto - 2º TADS */
 #include <stdio.h>
 #define ROWS 5
 #define COLS 5
@@ -61,7 +61,7 @@ int main (void) {
   /* Captura dos valores para a Matriz */
   for (int r = 0; r < ROWS; r++) {
     for (int c = 0; c < COLS; c++) {
-      printf("\nDigite o valor para a posiÃ§Ã£o A[%d][%d] da matriz: ", r + 1, c + 1);
+      printf("\nDigite o valor para a posição A[%d][%d] da matriz: ", r + 1, c + 1);
       scanf("%i", &M[r][c]);
     }
   }
@@ -94,7 +94,7 @@ int main (void) {
 
   printf("\nValor da soma da diagonal principal da matriz M: %d\n", resSomaDiagonalPrincipal);
 
-  /* Soma da diagonal secundÃ¡ria*/
+  /* Soma da diagonal secundária*/
   int resSomaDiagonalSecundaria = somaDiagonalSecundaria(M);
 
   printf("\nValor da soma da diagonal secundaria da matriz M: %d\n", resSomaDiagonalSecundaria);
