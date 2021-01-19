@@ -1,12 +1,5 @@
 #include <stdio.h>
-
-float calcularIMC (float peso, float altura) {
-	float IMC;
-
-	IMC = peso / (altura * altura);
-
-	return IMC;
-}
+#include "calculoIMC.h"
 
 int main(void) {
 	// Criando a struct;
