@@ -56,4 +56,6 @@ dkms.conf
 *.*~
 #*#
 *.*#
+
+# Visual Studio Code Directory
 .vscode
