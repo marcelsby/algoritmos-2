@@ -13,30 +13,32 @@ int main(void) {
 		float altura;
 	};
 
-	int quantidadePessoas = 2;
+	int quantidadePessoas = 6;
 	// Criando a variável composta homogênea pessoas que é uma 
 	// "instância" da estrutura Pessoa;
 	struct Pessoa pessoas[quantidadePessoas];
 
 	for (int i = 0; i < quantidadePessoas; i++) {
 
-		printf("Cadastrando a %da pessoa:\n", i + 1);
+		printf("\n#########################################\n");
+		printf("\nCadastrando a %da pessoa:\n", i + 1);
 
 		printf("\nInsira seu nome completo: ");
 		fflush(stdin);
 		fgets(pessoas[i].nome, 50, stdin);
 
-		printf("\nInsira seu sexo 'M' ou 'F': ");
+		printf("Insira seu sexo 'M' ou 'F': ");
 		scanf("%c", &pessoas[i].sexo);
 		
-		printf("\nInsira sua idade: ");
+		printf("Insira sua idade: ");
 		scanf("%i", &pessoas[i].idade);
 
-		printf("\nInsira seu peso: ");
+		printf("Insira seu peso: ");
 		scanf("%f", &pessoas[i].peso);
 	
-		printf("\nInsira sua altura: ");
+		printf("Insira sua altura: ");
 		scanf("%f", &pessoas[i].altura);
+		printf("\n#########################################\n");
 	}
 	
 
@@ -44,6 +46,7 @@ int main(void) {
 	for (int i = 0; i < quantidadePessoas; i++) {
 		float IMC = 0; 
 
+		printf("\n\n========================================");
 		printf("\nDados da %da pessoa:", i + 1);
 		printf("\nNome: %s", pessoas[i].nome);
 		printf("Idade: %d", pessoas[i].idade);
@@ -54,14 +57,15 @@ int main(void) {
 
 		if (IMC > 24.99) {
 			// acima do peso
-			printf("\n%s está acima do peso.", pessoas[i].nome);
+			printf("\nVocê está acima do peso.");
 		} else if (IMC > 18.49) {
 			// peso normal
-			printf("\n%s está no peso ideal.", pessoas[i].nome);
+			printf("\nVocê está no peso ideal.");
 		} else {
 			// abaixo do peso
-			printf("\n%s está abaixo do peso.", pessoas[i].nome);
+			printf("\nVocê está abaixo do peso.");
 		}
+		printf("\n========================================\n");
 	}
 
 	return 0;
