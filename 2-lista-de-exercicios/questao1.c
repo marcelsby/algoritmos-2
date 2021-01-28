@@ -19,7 +19,7 @@ void mostrarPessoa (struct Pessoa *pessoa);
 int main(void) {
 	// Variável que armazena o total de usuários que o programa
 	// cadastrará
-	int quantidadePessoas = 2;
+	int quantidadePessoas = 6;
 
 	// Criando a variável composta homogênea pessoas que é uma 
 	// "instância" da estrutura Pessoa;
@@ -50,8 +50,8 @@ int main(void) {
 
 	for (int i = 0; i < quantidadePessoas; i++) {
 		// Faço uma cópia temporária dos dados de cada usuário
-		// para uma estrutura para passá-la como parâmetro
-		// à função que mostra os dados de cada usuário.
+		// para uma estrutura e passo ela como parâmetro
+		// para o procedimento que mostra os dados de cada usuário.
 		struct Pessoa temp;
 
 		strcpy(temp.nome, pessoas[i].nome);
@@ -79,10 +79,10 @@ float calcularIMC (float peso, float altura) {
 void mostrarPessoa (struct Pessoa *pessoa) {
 		// Calcula o IMC
 		float IMC = calcularIMC(pessoa->peso, pessoa->altura); 
-		static int contadorPessoa = 0;
+		static int contadorPessoa = 1;
 
 		printf("\n\n========================================");
-		printf("\nDados da %da pessoa:", contadorPessoa + 1);
+		printf("\nDados da %da pessoa:", contadorPessoa);
 		printf("\nNome: %s", pessoa->nome);
 		printf("Idade: %d", pessoa->sexo);
 		printf("\nPeso: %.2f", pessoa->peso);
