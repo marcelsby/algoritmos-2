@@ -28,8 +28,8 @@ void imprimirMatriz (char matriz[][30], char *nome, int tamNome) {
 			}
 
 	// DIAGONAL SECUNDÁRIA
-	for (i = 29; i > -1; i--)
-		for (j = 29; j > -1; j--)
+	for (i = tamNome; i > -1; i--)
+		for (j = tamNome; j > -1; j--)
 			if (j == tamNome - 1 - i)
 				matriz[i][j] = nome[j];
 
