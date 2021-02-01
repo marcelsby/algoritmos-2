@@ -16,7 +16,7 @@ int main(void) {
 }
 
 void imprimirMatriz (char matriz[][30], char *nome, int tamNome) {
-	int i = tamNome, j = tamNome;
+	int i, j;
 
 	// DIAGONAL PRINCIPAL
 	for (i = 0; i < tamNome; i++)
