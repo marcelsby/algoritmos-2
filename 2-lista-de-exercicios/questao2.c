@@ -18,9 +18,16 @@ int main(void) {
 
 	qtdNumNegativos = negativos(arrayUsuario, tamanhoArray);
 
-	printf("\n========================================================\n");
-	printf("O array inserido possui %d números negativos.", qtdNumNegativos);
-	printf("\n========================================================\n");
+	if (qtdNumNegativos > 0) {
+		printf("\n========================================================\n");
+		printf("O array inserido possui %d números negativos.", qtdNumNegativos);
+		printf("\n========================================================\n");
+	} else {
+		printf("\n========================================================\n");
+		printf("O array inserido não possui números negativos.", qtdNumNegativos);
+		printf("\n========================================================\n");
+	}
+
 
 	return 0;
 }
