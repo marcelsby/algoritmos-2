@@ -1,0 +1,28 @@
+Algoritmos II
+2º TADS - IFG Jataí
+Marcel Barbosa
+
+LINHA 1:
+Temos a declaração das variáveis inteiras 'a', 'b', '*ptr', '**ptr_duplo'. Sendo que 'a' e 'b' são inicializadas com o valor 6 e 7 respectivamente, e as variáveis '*ptr' e '**ptr_duplo' são ponteiros que armazenam endereços de memória.
+
+LINHA 2:
+O 'ptr_duplo' recebe o valor do endereço de memória do ponteiro 'ptr', 'ptr_duplo' agora aponta para outro ponteiro.
+
+LINHA 3:
+O 'ptr' recebe o endereço de memória da variável 'a', ou seja, podemos alterar o valor da variável 'a' acessando o conteúdo do 'ptr' com '*ptr'.
+
+LINHA 4:
+Aqui acontece o seguinte:
+**ptr_duplo >> *ptr >> a = 6 (a) + 7 (*ptr);
+No fim a variável 'a' passa a valer 13.
+
+LINHA 5:
+Nessa linha o ponteiro 'ptr' recebe o endereço de memória da variável 'b'.
+
+LINHA 6:
+Acontece algo similar a linha 4:
+**ptr_duplo >> *ptr >> b = 13 (a) + 7 (*ptr) * 7 (**ptr_duplo);
+No fim a variável 'b' passa a valer 62 (13 + (7 * 7)).
+
+LINHA 7:
+Nessa linha é imprimido o valor das variáveis 'a' e 'b', respectivamente 13 e 62.

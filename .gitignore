@@ -62,5 +62,4 @@ dkms.conf
 
 # Media files
 *.mp4
-*.txt
 *.zip

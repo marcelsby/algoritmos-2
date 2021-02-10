@@ -1,0 +1,24 @@
+Algoritmos II
+2º TADS - IFG Jataí
+Marcel Barbosa
+
+LINHA 1:
+Temos a declaração das variáveis inteiras 'a', 'b', '*p1', '*p2'. Sendo que 'a' e 'b' são inicializadas com o valor 2 e 5 respectivamente, e as variáveis '*p1' e '*p2' são ponteiros ponteiros que armazenam endereços de memória.
+
+LINHA 2:
+O ponteiro '*p1' recebe o endereço de memória da variável previamente declarada e inicializada 'a', sou seja, o ponteiro '*p1' agora aponta para o endereço de memória da variável 'a'.
+
+LINHA 3:
+O mesmo que aconteceu na linha dois acontece aqui, mas o ponteiro '*p2' está apontando para o endereço de memória da variável 'b'.
+
+LINHA 4:
+Nessa linha o conteúdo do endereço de memória armazenado no ponteiro '*p1', ou seja, a variável 'a', está sendo alterado para uma soma dos seguintes valores: 2 (variável 'a') + 5 (conteúdo do endereço de memória armazenado no ponteiro '*p2', ou variável 'b') + 2 (conteúdo do endereço de memória armazenado no ponteiro '*p1', ou variável 'a'). Fazendo com que a variável 'a' assuma o valor 9.
+
+LINHA 5:
+O endereço de memória armazenado pelo ponteiro '*p1' é copiado para o ponteiro '*p2', ou seja, o ponteiro '*p2' aponta agora para o endereço de memória da variável 'a'. Fazendo com que os ponteiros '*p1' e '*p2' apontem para o endereço de memória da variável 'a', esta que atualmente vale 9. 
+
+LINHA 6:
+O conteúdo do ponteiro '*p1', ou variável 'a', é alterado para a soma de 9 (valor da variável 'a') + 9 (conteúdo do ponteiro '*p2', ou valor da variável 'a') + 9 (conteúdo do ponteiro '*p1', ou valor da variável 'a'). Fazendo assim com que o conteúdo do ponteiro '*p1', ou seja, o novo valor da variável 'a' seja 27. 
+
+LINHA 7:
+Ela apenas imprime os valores das variáveis 'a' e 'b' na tela do terminal, respectivamente os valores 27 e 5.
