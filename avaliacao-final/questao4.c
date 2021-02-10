@@ -6,11 +6,11 @@
 #include <stdlib.h>
 
 int pot(int base, int expoente); 
-int mult(int prod1, int prod2);
+int mult(int total, int base);
 
 int main (void) {
   int y, z;
-  long int res_final;
+  int res_final;
 
   printf("### CALCULADORA DE POTÊNCIA COM SOMAS ###");
 
@@ -22,22 +22,33 @@ int main (void) {
 
   res_final = pot(y, z);
 
-  printf("\nRESULTADO: %ld\n", res_final);
+  printf("\nRESULTADO: %d\n", res_final);
 
   return 0;
 }
 
 int pot(int base, int expoente) {
-  int resultado;
+  int resultado = base;
 
   if (expoente == 0) {
     return 1;
   } else {
-    return ;
+    for (int i = 1; i < expoente; i++)
+      resultado += mult(resultado, base);
+
+    return resultado;
   }
 } 
 
 
-int mult(int prod1, int prod2); {
+int mult(int total, int base); {
+  int res_mult = 0;  
 
+  if (base != 0) {
+    res_mult += total;
+    base--;
+    mult(total, base);
+  } else {
+    return res_mult;
+  }
 }
