@@ -38,12 +38,12 @@ int pot (int base, int expoente, int res_pot) {
 
   res_pot = mult(res_pot, base, res_pot);
 
+  expoente--;
+
   if (expoente == 1) {
     return res_pot;
   }
-
-  expoente--;
-
+  
   pot(base, expoente, res_pot);
 }
 
