@@ -5,50 +5,55 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int pot(int base, int expoente); 
-int mult(int total, int base);
+int pot(int base, int expoente, int res_pot); 
+int mult(int total, int base, int produto);
 
 int main (void) {
-  int y, z;
+  int n2, n1;
   int res_final;
 
-  printf("### CALCULADORA DE POTÊNCIA COM SOMAS ###");
+  printf("### CALCULADORA DE POTÊNCIAS POSITIVAS UTILIZANDO SOMA ###");
 
   printf("\nDigite a base da sua potência: ");
-  scanf("%d", &y);
+  scanf("%d", &n1);
 
   printf("\nDigite o expoente da sua potência: ");
-  scanf("%d", &z);
+  scanf("%d", &n2);
 
-  res_final = pot(y, z);
+  int resultado = n1;
+  res_final = pot(n1, n2, resultado);
 
   printf("\nRESULTADO: %d\n", res_final);
 
   return 0;
 }
 
-int pot(int base, int expoente) {
-  int resultado = base;
+int pot (int base, int expoente, int res_pot) {
+  abs(base);
+  abs(expoente);
 
   if (expoente == 0) {
     return 1;
-  } else {
-    for (int i = 1; i < expoente; i++)
-      resultado += mult(resultado, base);
-
-    return resultado;
   }
-} 
 
+  res_pot = mult(res_pot, base, res_pot);
 
-int mult(int total, int base); {
-  int res_mult = 0;  
-
-  if (base != 0) {
-    res_mult += total;
-    base--;
-    mult(total, base);
-  } else {
-    return res_mult;
+  if (expoente == 1) {
+    return res_pot;
   }
+
+  expoente--;
+
+  pot(base, expoente, res_pot);
+}
+
+
+int mult (int num, int contador, int produto) {  
+  if (contador == 1) {
+    return produto;
+  }
+
+  produto += num;
+  contador--;
+  mult(num, contador, produto);
 }

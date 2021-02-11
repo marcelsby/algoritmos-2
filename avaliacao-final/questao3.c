@@ -33,16 +33,16 @@ int DIV (int n1, int n2) {
   int x, y;
   
   x = abs(n1);
-  y = abs(n2);
+  y = abs(n2); 
 
-  int resDIV;
+  int res;
 
   if (x == y) {
     return 1;
   } else if (x < y) {
     return -1;
   } else {
-    resDIV = 1 + DIV(x-y, y); 
-    return resDIV;
+    res = 1 + DIV(x-y, y); 
+    return res;
   }
 } 
